@@ -10,3 +10,9 @@ Logstash running on OpenJDK JRE 7 and stable Debian.
 Create a Dockerfile with the following content:
 
     FROM solinea/logstash
+
+# Volumes
+
+Volume               | Description
+---------------------|-------------
+/etc/logstash/conf.d | Configuration
