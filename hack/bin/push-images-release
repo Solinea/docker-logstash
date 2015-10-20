@@ -1,0 +1,12 @@
+#!/bin/bash
+set -ex
+
+# Tag & Push Version tag to Release Registry
+docker tag -f "${NAME}" "${DOCKER_REGISTRY}/${NAME}:${TRAVIS_BRANCH}"
+docker push "${DOCKER_REGISTRY}/${NAME}:${TRAVIS_BRANCH}"
+
+# Tag & Push Version tag to Docker Hub
+docker tag -f "${NAME}" "solinea/${NAME}:${TRAVIS_BRANCH}"
+docker push "solinea/${NAME}:${TRAVIS_BRANCH}"
+
+docker images

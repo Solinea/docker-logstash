@@ -1,0 +1,8 @@
+#!/bin/bash
+set -ex
+
+# Tag & Push 'branch-commit' tag to Development Registry
+docker tag -f "${NAME}" "${DOCKER_REGISTRY_DEV}/${NAME}:${TRAVIS_BRANCH}-${COMMIT}"
+docker push "${DOCKER_REGISTRY_DEV}/${NAME}:${TRAVIS_BRANCH}-${COMMIT}"
+
+docker images
