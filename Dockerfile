@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM solinea-docker-community.artifactoryonline.com/openjdk:jre7
+FROM solinea/openjdk:jre7
 
 MAINTAINER Luke Heidecke <luke@solinea.com>
 
