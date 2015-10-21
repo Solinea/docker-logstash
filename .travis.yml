@@ -20,11 +20,11 @@ before_deploy:
     "${DOCKER_REGISTRY_DEV}"
 deploy:
   - provider: script
-    script: hack/bin/push-images-release
+    script: build/bin/push-images-release
     on:
       tags: true
   - provider: script
-    script: hack/bin/push-images-master
+    script: build/bin/push-images-master
     on:
       branch: master
 notifications:
